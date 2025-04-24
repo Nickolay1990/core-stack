@@ -1,14 +1,28 @@
+@font-face {
+  font-family: 'Impact';
+  src: url(/fonts/impact.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --general-font-family: 'Poppins', sans-serif;
+  --second-family: 'Impact', sans-serif;
+  --third-family: 'Montserrat', sans-serif;
+  --general-color-light-theme: #292929;
+  --general-color-dark-theme: #f0f0f0;
+  --accent-color: #00b068;
+  --background-light-theme: #f0f0f0;
+  --background-dark-theme: #1e2023;
+}
+
+body {
+  font-family: var(--general-font-family);
   font-size: 16px;
+  color: var(--general-color-light-theme);
+  background-color: var(--background-light-theme);
+  letter-spacing: 0.03em;
   line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,17 +30,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 100vw;
-  min-height: 100vh;
-  margin: 0;
-}
-
-main {
-  flex-grow: 1;
-}
-main:has(.back-link) {
-  text-align: center;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
