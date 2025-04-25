@@ -1,0 +1,40 @@
+.title-faq {
+  margin-bottom: 40px;
+  font-family: 'Impact', sans-serif;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+}
+
+.color-green {
+  color: #00b068;
+}
+.ac-trigger {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+}
+.accordion-list .ac {
+  border: none;
+  border-bottom: 1px solid #e4e5e6;
+  margin-bottom: 0;
+  padding: 28px 24px;
+}
+.is-active {
+  border-radius: 16px;
+}
+.ac-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #292929;
+}
