@@ -1,29 +1,41 @@
+.sect-faq {
+  margin-bottom: 80px;
+}
 .title-faq {
   margin-bottom: 40px;
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 52px;
   line-height: 1.23;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--general-color-light-theme);
 }
 
 .color-green {
-  color: #00b068;
+  color: var(--accent-color);
 }
-.ac-trigger {
-  font-family: 'Poppins', sans-serif;
+.accordion-list .ac .ac-trigger::after {
+}
+.accordion-list .ac .ac-icon-up {
+  text-align: center;
+  transform: translate(50%, 0);
+  position: absolute;
+  right: 24px;
+  top: 9px;
+}
+
+.accordion-list .ac .ac-trigger {
+  font-family: var(--general-font-family);
   font-weight: 400;
   font-size: 18px;
-  line-height: 1.6;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--general-color-light-theme);
+}
+.accordion-list .ac .ac-trigger:focus {
+  color: var(--general-color-light-theme);
 }
 .accordion-list .ac {
-  --color-grey: #292929;
-  background-color: #f0f0f0;
+  background-color: var(--background-light-theme);
   border: none;
   border-bottom: 1px solid #e4e5e6;
   margin-bottom: 0;
@@ -32,11 +44,8 @@
 .is-active {
   border-radius: 16px;
 }
-.ac-text {
-  font-family: 'Poppins', sans-serif;
+.accordion-list .ac .ac-panel .ac-text {
+  font-family: var(--general-font-family);
   font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--general-color-light-theme);
 }
