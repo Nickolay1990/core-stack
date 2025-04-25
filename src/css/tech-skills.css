@@ -1,0 +1,75 @@
+.tech-skills {
+  padding-top: 80px;
+}
+.marquee {
+  width: 1392px;
+  display: flex;
+  padding: 32px 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: relative;
+}
+#marquee-horizontal {
+  /*transform: scaleX(-256px);*/
+  color: light-dark(#292929, #f0f0f0);
+  background: light-dark(#bcdfd1, #204136);
+}
+#marquee-tilted {
+  z-index: -1;
+  /*transform: scaleX(-336px);
+  transform: scaleY(96px);*/
+  color: light-dark(#00b068, #14c57c);
+  background: light-dark(#e4e5e6, #2a2d32);
+  transform: rotate(2deg);
+}
+.marquee-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+  margin: 0;
+  min-width: 100%;
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 13s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  /*animation: 13s linear 1s infinite alternate marqueeLine;*/
+}
+.tilted {
+  animation-name: tiltedMarqueeLine;
+}
+.dot {
+  border-radius: 2px;
+  width: 8px;
+  height: 8px;
+  background-color: light-dark(#00b068, #14c57c);
+  transform: rotate(-180deg);
+}
+#dot-tilted {
+  background-color: light-dark(#292929, #f0f0f0);
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes tiltedMarqueeLine {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
