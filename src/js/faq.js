@@ -7,7 +7,7 @@ export const accordion = new Accordion('.accordion-list', {
     currentElement.style.backgroundColor = '#bcdfd1';
   },
   beforeClose: function (currentElement) {
-    currentElement.style.backgroundColor = '#fff';
+    currentElement.style.backgroundColor = '#F0F0F0';
   },
 });
 accordion.open(0);

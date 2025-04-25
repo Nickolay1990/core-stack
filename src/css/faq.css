@@ -22,6 +22,8 @@
   color: #292929;
 }
 .accordion-list .ac {
+  --color-grey: #292929;
+  background-color: #f0f0f0;
   border: none;
   border-bottom: 1px solid #e4e5e6;
   margin-bottom: 0;
