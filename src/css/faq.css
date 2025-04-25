@@ -14,16 +14,22 @@
 .color-green {
   color: var(--accent-color);
 }
-.accordion-list .ac .ac-trigger::after {
+.ac .ac-trigger::after {
+  display: none;
 }
 .accordion-list .ac .ac-icon-up {
   text-align: center;
-  transform: translate(50%, 0);
+  transform: translate(50%, 0) rotate(180deg);
   position: absolute;
   right: 24px;
   top: 9px;
+  fill: transparent;
+  stroke: var(--general-color-light-theme);
+  transition: transform 0.3s ease-in-out;
 }
-
+.accordion-list .ac.is-active .ac-icon-up {
+  transform: translate(50%, 0) rotate(0deg);
+}
 .accordion-list .ac .ac-trigger {
   font-family: var(--general-font-family);
   font-weight: 400;
