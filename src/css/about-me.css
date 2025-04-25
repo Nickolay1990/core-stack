@@ -1,0 +1,90 @@
+
+.About-me-section {
+    margin-top: 80px;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.About-me-all-h {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+}
+.About-me-all-div {
+    color: #292929;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+.About-me-ul-all {
+    list-style-type: square;
+    padding-left: 20px;
+}
+.About-me-ul-all li::marker {
+    color: #00B068;
+}
+
+.About-me-div {
+    display: flex;
+    padding-left: 20px;
+}
+
+.About-me-h {
+    font-family:  "Impact", sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 1.23;
+    letter-spacing: 0.03em;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    color: #292929;
+}
+
+.About-me-span {
+    color: #00B068
+}
+
+.About-me-div-img {
+ /* padding-left: 20px; */
+ display: flex;
+ justify-content: center;
+}
+/* 
+.About-me-img {
+ min-width: 320px;
+ height: 374px;
+ border-radius: 16px;
+} */
+
+.About-me-h-bio {
+    padding-top: 40px;
+    padding-bottom: 32px;
+}
+
+.About-me-p-bio-I {
+    padding-bottom: 24px;
+}
+.About-me-p-bio-A{
+    padding-bottom: 40px;
+}
+
+.About-me-h-education {
+    padding-bottom: 32px;
+}
+
+.About-me-li-education {
+    padding-bottom: 12px;
+}
+.About-me-li-education-A {
+    padding-bottom: 40px;
+}
+
+.About-me-h-role {
+    padding-bottom: 32px;
+}
+
+.About-me-li-role {
+    padding-bottom: 12px;
+}
