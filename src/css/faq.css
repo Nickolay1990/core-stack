@@ -83,13 +83,24 @@
   .sect-faq {
     margin-bottom: 164px;
   }
+  .sect-faq .container {
+    display: flex;
+    background-image: url('../img/faq/desk_faq_decor_bg.png');
+    background-repeat: no-repeat;
+    background-position: 32px 100%;
+    background-size: 526px;
+  }
+  @media (min-resolution: 192dpi) {
+    .sect-faq .container {
+      background-image: url('../img/faq/desk_faq_decor_bg@2x.png');
+    }
+  }
   .title-faq {
     width: 520px;
+    margin-right: 104px;
   }
   .accordion-list {
-    max-width: 592px;
-  }
-  .ac-btn-text {
-    width: 488px;
+    margin-top: 276px;
+    width: 592px;
   }
 }
