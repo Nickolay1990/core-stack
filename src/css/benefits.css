@@ -1,19 +1,25 @@
-.benefits-title {
-  font-family: 'Impact', sans-serif;
-  font-weight: 400;
-  font-size: 52px;
-  line-height: 1.24;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #292929;
-  padding-bottom: 40px;
-}
-.benefits-highlight {
-  color: #00b068;
+.sect-benefits {
+  margin-top: 80px;
 }
 
-.benefits-section {
-  padding-bottom: 80px;
+:root {
+  --benefits-font-family: 'Impact', sans-serif;
+  --benefits-font-weight: 400;
+  --benefits-font-size: 52px;
+  --benefits-line-height: 1.24;
+  --benefits-letter-spacing: 0.03em;
+  --benefits-text-transform: uppercase;
+  --benefits-margin-bottom: 40px;
+}
+
+.benefits-title {
+  font-family: var(--benefits-font-family);
+  font-weight: var(--benefits-font-weight);
+  font-size: var(--benefits-font-size);
+  line-height: var(--benefits-line-height);
+  letter-spacing: var(--benefits-letter-spacing);
+  text-transform: var(--benefits-text-transform);
+  margin-bottom: var(--benefits-margin-bottom);
 }
 
 .benefits-section-list {
@@ -26,22 +32,22 @@
   margin-bottom: 16px;
 }
 
-.benefits-section-title {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.56;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #292929;
-  padding-bottom: 16px;
+:root {
+  --benefits-section-font-weight: 400;
+  --benefits-section-font-size: 18px;
+  --benefits-section-line-height: 1.56;
+  --benefits-section-letter-spacing: 0.03em;
+  --benefits-section-text-transform: uppercase;
+  --benefits-section-margin-bottom: 16px;
 }
 
-.benefits-section-text {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
-  color: #292929;
+.benefits-section-title {
+  font-weight: var(--benefits-section-font-weight);
+  font-size: var(--benefits-section-font-size);
+  line-height: var(--benefits-section-line-height);
+  letter-spacing: var(--benefits-section-letter-spacing);
+  text-transform: var(--benefits-section-text-transform);
+  margin-bottom: var(--benefits-section-margin-bottom);
 }
 
 /*.dark-theme .benefits-title,
