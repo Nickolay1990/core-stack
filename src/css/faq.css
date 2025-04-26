@@ -55,7 +55,7 @@
   color: var(--general-color);
 }
 
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .sect-faq {
     margin-top: 124px;
   }
@@ -98,4 +98,4 @@
     margin-top: 276px;
     width: 592px;
   }
-}
+} */
