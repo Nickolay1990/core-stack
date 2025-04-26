@@ -1,67 +1,48 @@
-
 .about-me-section {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .about-me-all-h {
-    font-weight: 500;
-    font-size: 32px;
-    line-height: 1.25;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
 }
 
 .about-me-ul-all {
-    list-style-type: square;
-    margin-left: 20px;
+  list-style-type: square;
+  margin-left: 20px;
 }
+
 .about-me-ul-all li::marker {
-    color: #00B068;
+  color: #00b068;
 }
 
 .about-me-h {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.23;
-    letter-spacing: 0.03em;
-    margin-bottom: 40px;
-    color: var(--general-color-light-theme);
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+  color: var(--general-color);
 }
 
 .about-me-div-img {
- display: flex;
- justify-content: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
 }
 
-
- .about-me-bio-div {
-    margin-top: 40px;
-    margin-bottom: 32px;
-} 
-
-
-.about-me-p-bio-I {
-    margin-bottom: 24px;
-}
-.about-me-p-bio-A{
-    margin-bottom: 40px;
+.about-me-p-bio {
+  margin-bottom: 40px;
 }
 
-.about-me-h-education {
-    margin-bottom: 32px;
+.about-me-li {
+  margin-bottom: 12px;
 }
 
-.about-me-li-education {
-    margin-bottom: 12px;
-}
-.about-me-li-education-A {
-    margin-bottom: 40px;
-}
-
-.about-me-h-role {
-    margin-bottom: 32px;
-}
-
-.about-me-li-role {
-    margin-bottom: 12px;
+.about-me-div {
+  margin-bottom: 40px;
 }
