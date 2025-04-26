@@ -46,8 +46,10 @@
   margin-bottom: 0;
   padding: 28px 24px;
 }
-.is-active {
+.ac.is-active {
   border-radius: 16px;
+  background-color: var(--light-green-color);
+  opacity: 1;
 }
 .accordion-list .ac .ac-panel .ac-text {
   font-family: var(--general-font-family);
