@@ -9,12 +9,7 @@
     line-height: 1.25;
     letter-spacing: 0.02em;
 }
-.about-me-all-div {
-    color: #292929;
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-}
+
 .about-me-ul-all {
     list-style-type: square;
     margin-left: 20px;
@@ -37,17 +32,13 @@
  display: flex;
  justify-content: center;
 }
-/* 
-.About-me-img {
- min-width: 320px;
- height: 374px;
- border-radius: 16px;
-} */
 
-.about-me-h-bio {
+/*
+ .about-me-h-bio {
     margin-top: 40px;
     margin-bottom: 32px;
-}
+} 
+*/
 
 .about-me-p-bio-I {
     margin-bottom: 24px;
