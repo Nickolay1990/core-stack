@@ -17,25 +17,20 @@
 }
 .about-me-ul-all {
     list-style-type: square;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 .about-me-ul-all li::marker {
     color: #00B068;
 }
 
 .about-me-h {
-    font-family:  "Impact", sans-serif;
+    font-family: var(--second-family);
     font-weight: 400;
     font-size: 52px;
     line-height: 1.23;
     letter-spacing: 0.03em;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
     color: #292929;
-}
-
-.about-me-span {
-    color: #00B068
 }
 
 .about-me-div-img {
@@ -50,26 +45,26 @@
 } */
 
 .about-me-h-bio {
-    padding-top: 40px;
-    padding-bottom: 32px;
+    margin-top: 40px;
+    margin-bottom: 32px;
 }
 
 .about-me-p-bio-I {
-    padding-bottom: 24px;
+    margin-bottom: 24px;
 }
 .about-me-p-bio-A{
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .about-me-h-education {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .about-me-li-education {
-    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
 .about-me-li-education-A {
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .about-me-h-role {
