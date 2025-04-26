@@ -25,16 +25,21 @@ async function initReviewsSlider() {
       .map(
         review => `
       <li class="swiper-slide">
-        <p>${review.review}</p>
-        <img src="${review.avatar_url}" alt="${review.author}" />
-        <p><strong>${review.author}</strong></p>
+        <p class="reviews-text">${review.review}</p>
+        <div class="reviews-user">
+          <img class="reviews-img" src="${review.avatar_url}" alt="${review.author}" />
+          <p class="reviews-text-user">${review.author}</p>
+        </div>
       </li>`
       )
       .join('');
 
+    const prevIcon = prevButton.querySelector('use');
+    const nextIcon = nextButton.querySelector('use');
+
     swiper = new Swiper('.swiper', {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 32,
       grabCursor: true,
       keyboard: {
         enabled: true,
@@ -47,10 +52,17 @@ async function initReviewsSlider() {
         1280: { slidesPerView: 2 },
       },
       on: {
-        afterInit: updateNavButtons,
-        slideChange: updateNavButtons,
+        afterInit: () => {
+          updateNavButtons();
+          setEqualHeightSlides(); // Додаємо вирівнювання висоти слайдів
+        },
+        slideChange: () => {
+          updateNavButtons();
+          setEqualHeightSlides(); // Оновлюємо висоту при зміні слайду
+        },
       },
     });
+
     document.addEventListener('keydown', event => {
       if (!swiper) return;
 
@@ -78,8 +90,41 @@ async function initReviewsSlider() {
       prevButton.disabled = isAtStart;
       nextButton.disabled = isAtEnd;
 
-      prevButton.classList.toggle('disabled', isAtStart);
-      nextButton.classList.toggle('disabled', isAtEnd);
+      updateButtonIcon(prevButton, prevIcon, isAtStart);
+      updateButtonIcon(nextButton, nextIcon, isAtEnd);
+    }
+
+    function updateButtonIcon(button, iconElement, isDisabled) {
+      if (isDisabled) {
+        iconElement.setAttribute('href', '/img/sprite.svg#icon-arrow-inactive');
+      } else {
+        iconElement.setAttribute('href', '/img/sprite.svg#icon-arrow-default');
+      }
+    }
+
+    function setEqualHeightSlides() {
+      const slides = document.querySelectorAll('.swiper-slide');
+      let maxHeight = 0;
+
+      // Знаходимо найбільшу висоту для абзаців в слайдах
+      slides.forEach(slide => {
+        const reviewText = slide.querySelector('.reviews-text');
+        if (reviewText) {
+          reviewText.style.height = 'auto'; // Обнуляємо висоту
+          const height = reviewText.offsetHeight;
+          if (height > maxHeight) {
+            maxHeight = height;
+          }
+        }
+      });
+
+      // Встановлюємо висоту для всіх абзаців в слайдах на рівні найвищого
+      slides.forEach(slide => {
+        const reviewText = slide.querySelector('.reviews-text');
+        if (reviewText) {
+          reviewText.style.height = `${maxHeight}px`;
+        }
+      });
     }
   } catch (error) {
     iziToast.error({
@@ -92,3 +137,5 @@ async function initReviewsSlider() {
 }
 
 initReviewsSlider();
+
+console.log('reviews');
