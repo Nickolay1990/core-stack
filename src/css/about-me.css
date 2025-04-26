@@ -25,7 +25,7 @@
     line-height: 1.23;
     letter-spacing: 0.03em;
     margin-bottom: 40px;
-    color: #292929;
+    color: var(--general-color-light-theme);
 }
 
 .about-me-div-img {
@@ -33,12 +33,12 @@
  justify-content: center;
 }
 
-/*
- .about-me-h-bio {
+
+ .about-me-bio-div {
     margin-top: 40px;
     margin-bottom: 32px;
 } 
-*/
+
 
 .about-me-p-bio-I {
     margin-bottom: 24px;
