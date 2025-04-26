@@ -17,12 +17,15 @@
 .ac .ac-trigger::after {
   display: none;
 }
+.ac-btn-text {
+  margin-right: 16px;
+}
 .accordion-list .ac .ac-icon-up {
   text-align: center;
   transform: translate(50%, 0) rotate(180deg);
   position: absolute;
   right: 24px;
-  top: 9px;
+  top: 5px;
   fill: transparent;
   stroke: var(--general-color-light-theme);
   transition: transform 0.3s ease-in-out;
@@ -34,6 +37,7 @@
   font-family: var(--general-font-family);
   font-weight: 400;
   font-size: 18px;
+  line-height: 1.56;
   text-transform: uppercase;
   color: var(--general-color-light-theme);
 }
@@ -54,4 +58,38 @@
   font-family: var(--general-font-family);
   font-weight: 300;
   color: var(--general-color-light-theme);
+}
+
+@media only screen and (min-width: 768px) {
+  .sect-faq {
+    margin-bottom: 124px;
+  }
+  .title-faq {
+    margin-bottom: 60px;
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+  .accordion-list .ac .ac-trigger {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .ac-btn-text {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .sect-faq {
+    margin-bottom: 164px;
+  }
+  .title-faq {
+    width: 520px;
+  }
+  .accordion-list {
+    max-width: 592px;
+  }
+  .ac-btn-text {
+    width: 488px;
+  }
 }
