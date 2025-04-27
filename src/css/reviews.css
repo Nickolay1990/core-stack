@@ -1,10 +1,10 @@
 .reviews-section {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 .reviews-title {
   font-weight: 400;
   font-size: 52px;
-  line-height: 1.23077;
+  line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--general-color);
@@ -27,7 +27,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-direction: row;
+
   gap: 16px;
 }
 .reviews-img {
@@ -41,14 +41,14 @@
 
 .reviews-container-btn {
   display: flex;
-  align-items: flex-start;
+
   justify-content: flex-end;
   flex-direction: row;
   gap: 16px;
 }
 
 .reviews-nav-button {
-  border: 1px solid #e4e5e6;
+  border: 1px solid var(--techskills-gray-back-color);
   border-radius: 8px;
   padding: 12px;
   width: 48px;
@@ -60,6 +60,6 @@
 }
 
 .reviews-nav-button:hover {
-  border: 1px solid #292929;
+  border: 1px solid var(--general-color);
   background-color: var(--techskills-gray-back-color);
 }
