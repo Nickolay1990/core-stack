@@ -46,6 +46,8 @@ export async function initReviewsSlider() {
       simulateTouch: true,
       breakpoints: {
         360: { slidesPerView: 1 },
+        768: { slidesPerView: 1 },
+        1280: { slidesPerView: 2 },
       },
       on: {
         afterInit: () => {
