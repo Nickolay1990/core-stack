@@ -16,6 +16,30 @@
   --techskills-gray-back-color: #e4e5e6;
 }
 
+html.classic {
+  --general-background-color: #f0f0f0;
+  --general-color: #292929;
+  --accent-color: #00b068;
+}
+
+html.dark {
+  --general-background-color: #1e2023;
+  --general-color: #f0f0f0;
+  --accent-color: #14c57c;
+}
+
+html.blue {
+  --general-background-color: #220552;
+  --general-color: #f0f0f0;
+  --accent-color: #d9cf41;
+}
+
+html.green-dark {
+  --general-background-color: #023011;
+  --general-color: #f0f0f0;
+  --accent-color: #ff21d6;
+}
+
 body {
   font-family: var(--general-font-family);
   font-size: 16px;
