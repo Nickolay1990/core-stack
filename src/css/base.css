@@ -9,18 +9,43 @@
   --general-font-family: 'Poppins', sans-serif;
   --second-family: 'Impact', sans-serif;
   --third-family: 'Montserrat', sans-serif;
-  --general-color-light-theme: #292929;
-  --general-color-dark-theme: #f0f0f0;
+  --general-color: #292929;
   --accent-color: #00b068;
-  --background-light-theme: #f0f0f0;
-  --background-dark-theme: #1e2023;
+  --general-background-color: #f0f0f0;
+  --light-green-color: #bcdfd1;
+  --techskills-gray-back-color: #e4e5e6;
+}
+
+html.classic {
+  --general-background-color: #f0f0f0;
+  --general-color: #292929;
+  --accent-color: #00b068;
+}
+
+html.dark {
+  --general-background-color: #1e2023;
+  --general-color: #f0f0f0;
+  --accent-color: #14c57c;
+}
+
+html.blue {
+  --general-background-color: #220552;
+  --general-color: #f0f0f0;
+  --accent-color: #d9cf41;
+}
+
+html.green-dark {
+  --general-background-color: #023011;
+  --general-color: #f0f0f0;
+  --accent-color: #ff21d6;
 }
 
 body {
   font-family: var(--general-font-family);
   font-size: 16px;
-  color: var(--general-color-light-theme);
-  background-color: var(--background-light-theme);
+  font-weight: 300;
+  color: var(--general-color);
+  background-color: var(--general-background-color);
   letter-spacing: 0.03em;
   line-height: 1.5;
   font-synthesis: none;
@@ -40,4 +65,8 @@ body {
   clip: rect(0 0 0 0);
   white-space: nowrap;
   border: 0;
+}
+
+.green-color {
+  color: var(--accent-color);
 }
