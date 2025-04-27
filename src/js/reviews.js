@@ -1,20 +1,18 @@
-import axios from 'axios';
 import Swiper from 'swiper';
 import 'swiper/css';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import { fetchReviews } from './api';
 
 let swiper;
 
-async function initReviewsSlider() {
+export async function initReviewsSlider() {
   const reviewsList = document.getElementById('reviews-list');
   const prevButton = document.getElementById('prev-button');
   const nextButton = document.getElementById('next-button');
 
   try {
-    const { data: reviews } = await axios.get(
-      'https://portfolio-js.b.goit.study/api/reviews'
-    );
+    const reviews = await fetchReviews();
 
     if (!Array.isArray(reviews) || reviews.length === 0) {
       reviewsList.innerHTML = `<li class="swiper-slide">Not found</li>`;
@@ -48,8 +46,6 @@ async function initReviewsSlider() {
       simulateTouch: true,
       breakpoints: {
         360: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
-        1280: { slidesPerView: 2 },
       },
       on: {
         afterInit: () => {
@@ -137,5 +133,3 @@ async function initReviewsSlider() {
 }
 
 initReviewsSlider();
-
-console.log('reviews');
