@@ -91,6 +91,7 @@
   .faq-start-container {
     display: flex;
     flex-direction: column;
+    margin-right: 104px;
     position: relative;
   }
   .faq-start-container::after {
@@ -100,7 +101,6 @@
   }
   .title-faq {
     width: 520px;
-    margin-right: 104px;
     margin-bottom: 240px;
   }
   .accordion-list {
