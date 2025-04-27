@@ -56,10 +56,12 @@
 }
 
 .arrow-left {
-  transform: rotate(-180deg);
 }
 
 .reviews-nav-button:hover {
   border: 1px solid var(--general-color);
-  background-color: var(--techskills-gray-back-color);
+}
+.icon-active {
+}
+.icon-inactive {
 }
