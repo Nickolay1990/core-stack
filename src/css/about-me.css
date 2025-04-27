@@ -1,0 +1,48 @@
+.about-me-section {
+  padding-top: 80px;
+}
+
+.about-me-all-h {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+.about-me-ul-all {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+.about-me-ul-all li::marker {
+  color: #00b068;
+}
+
+.about-me-h {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+  color: var(--general-color);
+}
+
+.about-me-div-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.about-me-p-bio {
+  margin-bottom: 40px;
+}
+
+.about-me-li {
+  margin-bottom: 12px;
+}
+
+.about-me-div {
+  margin-bottom: 40px;
+}

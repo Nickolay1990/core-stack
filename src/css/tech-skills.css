@@ -1,0 +1,164 @@
+.tech-skills {
+  padding-top: 80px;
+}
+
+.marquee {
+  width: 100%;
+  max-width: 1392px;
+  margin: 0 auto;
+  display: flex;
+  padding: 32px 0;
+  overflow: hidden;
+  font-family: var(--general-font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7), 2px 2px 4px rgba(0, 0, 0, 0.6),
+    -1px -1px 2px rgba(255, 255, 255, 0.5),
+    -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.marquee-horizontal {
+  margin-bottom: 16px;
+  color: var(--general-color);
+  background: var(--light-green-color);
+}
+
+.marquee-tilted {
+  z-index: -1;
+  color: var(--accent-color);
+  background: var(--techskills-gray-back-color);
+  transform: rotate(2deg);
+}
+
+.marquee-inner {
+  display: flex;
+  white-space: nowrap;
+}
+
+.marquee-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  animation: marqueeLine 13s linear infinite;
+}
+
+.tilted {
+  animation: tiltedMarqueeLine 15s linear infinite;
+  animation-delay: 2s;
+}
+.marquee:hover .marquee-line {
+  animation-play-state: paused;
+}
+.dot {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+}
+
+.dot-horizontal {
+  background-color: var(--accent-color);
+}
+
+.dot-tilted {
+  background-color: var(--general-color);
+}
+
+@keyframes marqueeLine {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes tiltedMarqueeLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+/* анімований рух блику */
+.marquee-horizontal::before,
+.marquee-tilted::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 2s infinite;
+  pointer-events: none; /* Щоб не блокував кліки */
+  border-radius: 16px;
+  z-index: 1;
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+/*ефект втиснутості*/
+.marquee-horizontal {
+  background: linear-gradient(
+    135deg,
+    var(--light-green-color) 0%,
+    #a0c7b5 100%
+  );
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.2);
+  transform: perspective(1000px) rotateX(1deg);
+}
+
+.marquee-tilted {
+  background: linear-gradient(
+    135deg,
+    var(--techskills-gray-back-color) 0%,
+    #c0c1c2 100%
+  );
+  box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.15),
+    inset 0 -4px 8px rgba(255, 255, 255, 0.2);
+  transform: perspective(1000px) rotateX(1deg) rotate(2deg);
+}
+/*анімовані зірочки*/
+.star {
+  position: absolute;
+  font-size: 16px;
+  color: #00ffae;
+  text-shadow: 0 0 6px #00ffae, 0 0 12px #00ffae;
+  opacity: 0;
+  animation: twinkle 2s infinite ease-in-out;
+  pointer-events: none;
+  z-index: -2;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(45deg);
+  }
+}
