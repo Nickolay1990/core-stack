@@ -111,6 +111,9 @@
 }
 
 @media only screen and (min-width: 768px) {
+    .together {
+        padding-top: 124px;
+    }
     .together-container {
         padding-bottom: 124px;
         position: relative;
@@ -125,7 +128,7 @@
         background-repeat: no-repeat;
         background-size: contain;
         top: -115px;
-        right: 60px;
+        right: 28px;
         pointer-events: none;
         z-index: 1;
     }
@@ -136,32 +139,21 @@
         margin-bottom: 60px;
     }
     .contacts {
-        width: 639px;
-        height: 120px;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
     .contacts-title {
         width: 488px;
-        height: 64px;
     }
     .contacts-list {
-        width: 639px;
-        height: 24px;
         flex-direction: row;
         justify-content: space-around;
     }
-    .contacts-item {
-        width: auto;
-        align-items: center;
-    }
-    .form-wrapper {
-        width: 100%;
-    }
-    .form-user-input {
-        
-    }
+    
     .form-btn {
         min-width: 173px;
         margin-left: 0;
     }
   }
+
+
+
