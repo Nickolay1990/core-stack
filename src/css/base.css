@@ -16,6 +16,18 @@
   --techskills-gray-back-color: #e4e5e6;
 }
 
+html.dark {
+  --general-background-color: red;
+}
+
+html.custom1 {
+  --general-background-color: green;
+}
+
+html.custom2 {
+  --general-background-color: blue;
+}
+
 body {
   font-family: var(--general-font-family);
   font-size: 16px;
