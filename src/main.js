@@ -9,4 +9,4 @@ import './js/faq';
 import './js/reviews';
 import './js/work-together';
 import './js/footer';
-console.log('main');
+import './js/sidebar';
