@@ -1,24 +1,24 @@
-/**Основна функція ефект нескінченного руху тексту чи контенту.*/
-/**Додається обробник події, який чекає повного завантаження HTML-документу.
- * Коли все готово, викликається функція initMarquee*/
+/**The main function is the effect of infinite movement of text or content.*/
+/**An event handler is added that waits for the HTML document to be fully loaded.
+ * When everything is ready, the initMarquee function is called*/
 document.addEventListener('DOMContentLoaded', initMarquee);
-/**Оголошення функції initMarquee, яка ініціалізує логіку
- *  для усіх елементів з класом .marquee-inner. */
+/**Declaration of the initMarquee function, which initializes the logic
+ * for all elements with the class .marquee-inner. */
 function initMarquee() {
   const marquees = document.querySelectorAll('.marquee-inner');
-  /**Знаходяться всі елементи в документі, які мають клас marquee-inner,
-   *  і зберігаються у змінну marquees як список (NodeList). */
+  /**Finds all elements in the document that have the class marquee-inner,
+   * and stores them in the variable marquees as a list (NodeList). */
   marquees.forEach(function (marqueeInner) {
-    /**У поточному елементі marqueeInner шукаємо вкладений елемент з класом marquee-line. */
+    /**In the current marqueeInner element, look for a nested element with the class marquee-line. */
     const line = marqueeInner.querySelector('.marquee-line');
-    /**Викликаємо функцію cloneLine, яка створює копію знайденої "лінії". */
+    /**Call the cloneLine function, which creates a copy of the found "line". */
     const clone = cloneLine(line);
-    /**Додаємо клоновану "лінію" в кінець поточного marqueeInner */
+    /**Add cloned "line" to the end of the current marqueeInner */
     marqueeInner.appendChild(clone);
   });
 }
-/**Оголошення допоміжної функції,
- * яка глибоко копіює переданий DOM-вузол разом з усіма його дочірніми елементами. */
+/**Declares a helper function that
+ * deep copies the passed DOM node along with all its children. */
 function cloneLine(line) {
   return line.cloneNode(true);
 }
@@ -32,53 +32,53 @@ function cloneLine(line) {
     marqueeInner.appendChild(clone);
   });
 });*/
-/**функція для зірочок */
+/**function for asterisks */
 document.addEventListener('DOMContentLoaded', function generateNeonStars() {
   const marquees = document.querySelectorAll('.marquee');
-  // Знаходимо обидві полоси.
+  // Find both lanes.
 
   const neonColors = ['#00ffae', '#39ff14', '#14FF65', '#40F51E', '#AFFF14'];
-  //  Створюємо масив кольорів для неонових зірочок.
+  // Create an array of colors for the neon stars.
 
   marquees.forEach(function (marquee) {
-    //  Для кожної полоски виконуємо вставку зірочок.
+    // For each strip, insert asterisks.
 
-    for (let i = 0; i < 24; i++) {
-      //  Створюємо 24 зірочок на кожну полосу.
+    for (let i = 0; i < 21; i++) {
+      // Create 21 stars for each strip.
 
       const star = document.createElement('span');
-      //  Створюємо елемент <span>.
+      // Create a <span> element.
 
       star.classList.add('star');
-      //  Додаємо клас для стилізації.
+      // Add a class for styling.
 
-      star.innerHTML = '★';
-      //  Вставляємо символ зірочки.
+      star.innerHTML = '✷';
+      // Insert an asterisk symbol.
 
-      // Випадковий колір зі списку
+      // Random color from the list
       const randomColor =
         neonColors[Math.floor(Math.random() * neonColors.length)];
-      // Вибираємо випадковий колір зі списку.
+      // Choose a random color from the list.
 
       star.style.color = randomColor;
       star.style.textShadow = `0 0 6px ${randomColor}, 0 0 12px ${randomColor}`;
-      // Застосовуємо неонове світіння того ж кольору.
+      // Apply a neon glow of the same color.
 
-      const randomSize = 8 + Math.random() * 16; // Від 8px до 24px
+      const randomSize = 8 + Math.random() * 16; // From 8px to 24px
       star.style.fontSize = `${randomSize}px`;
-      // Випадковий розмір шрифту
+      // Random font size
 
       star.style.top = Math.random() * 100 + '%';
-      //  Випадкове вертикальне положення.
+      // Random vertical position.
 
       star.style.left = Math.random() * 100 + '%';
-      //  Випадкове горизонтальне положення.
+      // Random horizontal position.
 
       star.style.animationDuration = 2 + Math.random() * 2 + 's';
-      //  Випадкова швидкість миготіння.
+      // Random blink rate.
 
       marquee.appendChild(star);
-      //  Додаємо зірочку у відповідну полосу.
+      // Add an asterisk to the corresponding strip.
     }
   });
 });

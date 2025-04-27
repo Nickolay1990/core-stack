@@ -84,7 +84,7 @@
     transform: translateX(0%);
   }
 }
-/* анімований рух блику */
+/* animated glare movement */
 .marquee-horizontal::before,
 .marquee-tilted::before {
   content: '';
@@ -101,7 +101,7 @@
   );
   transform: skewX(-20deg);
   animation: shine 2s infinite;
-  pointer-events: none; /* Щоб не блокував кліки */
+  pointer-events: none; /* To avoid blocking clicks */
   border-radius: 16px;
   z-index: 1;
 }
@@ -117,7 +117,7 @@
     left: 150%;
   }
 }
-/*ефект втиснутості*/
+/* impression effect */
 .marquee-horizontal {
   background: linear-gradient(
     135deg,
@@ -139,7 +139,7 @@
     inset 0 -4px 8px rgba(255, 255, 255, 0.2);
   transform: perspective(1000px) rotateX(1deg) rotate(2deg);
 }
-/*анімовані зірочки*/
+/* animated stars */
 .star {
   position: absolute;
   font-size: 16px;
@@ -160,5 +160,14 @@
   50% {
     opacity: 1;
     transform: scale(1.2) rotate(45deg);
+  }
+}
+@media (min-width: 768px) and (max-width: 1279px) {
+  .marquee {
+    max-width: 1517px;
+    padding: 40px 0;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
   }
 }
