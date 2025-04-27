@@ -168,6 +168,9 @@
   height: 448px;
   border-radius: 16px;
   overflow: hidden;
+  margin-left: 220px;
+  margin-bottom: 80px;
+  margin-top: 272px;
 }
 
 .about-me-div {
@@ -175,12 +178,14 @@
   display: flex;
   flex-direction: column;
   margin-left: 0;
+  width: 488px;
 }
 
 .about-me-div-comp {
   display: flex;
   gap: 136px;
   margin-top: 40px;
+  margin-left: 220px;
 }
 
 .about-me-div-computer {
