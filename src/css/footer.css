@@ -4,13 +4,6 @@
     padding-bottom: 24px;
   }
   
-  .footer-container {
-    max-width: 360px;
-    height: 232px;
-    align-items: center;
-    padding: 0;
-  }
-  
   .footer-nav {
     display: flex;
     flex-direction: column;
@@ -23,11 +16,7 @@
     width: 197px;
     height: 48px;
     font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
     text-align: center;
-    color: #292929;
   }
 
   .footer-nav-item {
@@ -35,17 +24,17 @@
   }
   
   .logo {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--second-family);
     font-weight: 400;
     font-size: 32px;
     line-height: 1.0;
-    color: #292929;
+    color: var(--general-color-light-theme);
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 
   .logo-part {
-    color: #008068;
+    color: var(--accent-color);
   }
   
   .footer-nav {
@@ -57,16 +46,15 @@
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
-    color: #292929;
+    color: var(--general-color-light-theme);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
+  .footer-nav-link:hover,
+.footer-nav-link:focus {
+  color: var(--accent-color);
+}
   @media only screen and (min-width: 768px) {
-    .footer-container {
-        height: 88px;
-        width: 704px;
-        max-width: 704px;
-    }
-
     .right {
         width: 351px;
         height: 24px;
