@@ -163,6 +163,10 @@
   }
 }
 @media (min-width: 768px) and (max-width: 1279px) {
+  .tech-skills {
+    padding-top: 124px;
+  }
+
   .marquee {
     max-width: 1517px;
     padding: 40px 0;
