@@ -11,6 +11,7 @@
     line-height: 1.25;
     text-transform: uppercase;
     padding-top: 32px;
+    padding-bottom: 32px;
     max-width: 360px;
     
 }
@@ -24,13 +25,15 @@
     font-size: 18px;
     line-height: 1.6;
     text-transform: uppercase;
+    padding-bottom: 24px;
+    padding-top: 20px;
 }
 
 .hero-describe {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
-    gap: 32px;
+    
     background-image: url(/img/hero/mob_hero_and_meny_decor_bg.png),
      linear-gradient(var(--general-background-color),var(--general-background-color));
         
@@ -60,3 +63,7 @@
         linear-gradient(var(--general-background-color),var(--general-background-color)) 
     }
 }
+
+
+
+
