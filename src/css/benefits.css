@@ -12,6 +12,10 @@
   margin-bottom: 40px;
 }
 
+.decor-img {
+  display: none;
+}
+
 .benefits-section-list {
   display: flex;
   flex-direction: column;
@@ -78,8 +82,58 @@
   }
 }
 
-/*.dark-theme .benefits-title,
-.dark-theme .benefits-section-title,
-.dark-theme .benefits-section-text {
-  color: #f0f0f0;
-}*/
+/*Benefits Desktop*/
+
+@media only screen and (min-width: 1280px) {
+  .sect-benefits {
+    position: relative;
+    padding-top: 164px;
+    overflow: hidden;
+  }
+
+  .benefits-title {
+    max-width: 704px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .decor-img {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: calc(50% + 80px);
+    transform: translateY(60px);
+    z-index: 1;
+  }
+
+  .benefits-section-list {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: -80px;
+    column-gap: 32px;
+    row-gap: 0;
+  }
+
+  .benefits-section-list li:nth-child(1) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: end;
+  }
+
+  .benefits-section-list li:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    margin-top: 32px;
+  }
+
+  .benefits-section-list li:nth-child(3) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin-top: 32px;
+  }
+
+  .benefits-section-list li:nth-child(4) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    margin-top: 32px;
+  }
+}
