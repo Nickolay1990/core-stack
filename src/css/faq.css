@@ -1,5 +1,5 @@
 .sect-faq {
-  margin-top: 80px;
+  padding-top: 80px;
 }
 .title-faq {
   margin-bottom: 40px;
@@ -40,7 +40,7 @@
   color: var(--general-color);
 }
 .accordion-list .ac {
-  background-color: var(--background-light-theme);
+  background-color: var(--general-background-color);
   border: none;
   border-bottom: 1px solid var(--techskills-gray-back-color);
   margin-bottom: 0;
@@ -56,9 +56,9 @@
   color: var(--general-color);
 }
 
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   .sect-faq {
-    margin-top: 124px;
+    padding-top: 124px;
   }
   .title-faq {
     margin-bottom: 60px;
@@ -75,7 +75,7 @@
   }
 }
 
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
   .sect-faq {
     margin-top: 164px;
   }
