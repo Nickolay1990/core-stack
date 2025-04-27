@@ -1,159 +1,150 @@
 .together {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .together-container {
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .together-title {
-    margin-bottom: 40px;
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.23;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--general-color-light-theme);
+  margin-bottom: 40px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--general-color-light-theme);
 }
 
 .together-part {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .contacts {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .contacts-title {
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.56;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--general-color-light-theme);
-    margin-bottom: 32px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--general-color-light-theme);
+  margin-bottom: 32px;
 }
 
 .contacts-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.contacts-item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .contacts-icon {
-    margin-right: 16px;
-    fill: var(--background-light-theme);
-    stroke: var(--accent-color);
+  margin-right: 16px;
+  fill: var(--background-light-theme);
+  stroke: var(--accent-color);
 }
 
 .contacts-link {
-    display: flex;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
 .contacts-link:focus {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .form-user-input {
-    height: 48px;
-    border-radius: 8px;
-    padding: 0 0 0 16px;
-    border: none;
-    background-color: #e4e5e6;
+  height: 48px;
+  border-radius: 8px;
+  padding: 0 0 0 16px;
+  border: none;
+  background-color: #e4e5e6;
 }
 
 .form-comment {
-    height: 128px;
-    border-radius: 8px;
-    padding: 16px;
-    border: none;
-    resize: none;
-    background-color: #e4e5e6;
+  height: 128px;
+  border-radius: 8px;
+  padding: 16px;
+  border: none;
+  resize: none;
+  background-color: #e4e5e6;
 }
 
 .form-btn {
-    display: block;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: var(--general-color-dark-theme);
-    border-radius: 8px;
-    border: none;
-    padding: 12px 24px;
-    min-width: 100%;
-    height: 48px;
-    background: var(--accent-color);
-    margin-left: auto;
-    margin-right: auto;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--general-color-dark-theme);
+  border-radius: 8px;
+  border: none;
+  padding: 12px 24px;
+  min-width: 100%;
+  height: 48px;
+  background: var(--accent-color);
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-btn:hover,
 .form-btn:focus {
-   background: #009156; 
+  background: #009156;
 }
 
 @media only screen and (min-width: 768px) {
-    .together {
-        padding-top: 124px;
-    }
-    .together-container {
-        padding-bottom: 124px;
-        position: relative;
-    }
-
-    .together-container::before {
-        content: "";
-        position: absolute;
-        width: 336px;
-        height: 260px;
-        background-image: url(/img/work_together/tab_work_together_decor_bg.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        top: -115px;
-        right: 28px;
-        pointer-events: none;
-        z-index: 1;
-    }
-    .together-title {
-        font-size: 108px;
-        line-height: 1.15;
-        letter-spacing: 0.02em;
-        margin-bottom: 60px;
-    }
-    .contacts {
-        margin-bottom: 60px;
-    }
-    .contacts-title {
-        width: 488px;
-    }
-    .contacts-list {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    
-    .form-btn {
-        min-width: 173px;
-        margin-left: 0;
-    }
+  .together {
+    padding-top: 124px;
+  }
+  .together-container {
+    padding-bottom: 124px;
+    position: relative;
   }
 
+  .together-container::before {
+    content: '';
+    position: absolute;
+    width: 336px;
+    height: 260px;
+    background-image: url(/img/work_together/tab_work_together_decor_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: -115px;
+    right: 28px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .together-title {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+  .contacts {
+    margin-bottom: 60px;
+  }
+  .contacts-title {
+    width: 488px;
+  }
+  .contacts-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-
+  .form-btn {
+    min-width: 173px;
+    margin-left: 0;
+  }
+}
