@@ -47,7 +47,7 @@
   margin-bottom: 40px;
 }
 
-/* -------------------TABLET------------------- */
+/*-------------------TABLET------------------- */
 
 @media screen and (min-width: 768px) {
   .about-me-div-container {
@@ -122,4 +122,69 @@
   .about-me-li {
     margin-bottom: 16px;
   }
+}
+
+/*-------------------COMPUTER-------------------*/
+
+@media screen and (min-width: 1280px) {
+  .about-me-div-container {
+    position: relative;
+  }
+
+  .about-me-div-container::before {
+    content: "";
+    position: absolute;
+    width: 384px;
+    height: 288px;
+    background-image: url(/img/about_me/desk_about_me_decor_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 692px;
+    right: 10%; 
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .about-me-div-container::before {
+      background-image: url(/img/about_me/desk_about_me_decor_bg@2x.png);
+    }
+  }
+}
+
+.about-me-section {
+  padding-top: 164px;
+}
+
+.about-me-tab {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px 60px;
+  align-items: flex-start; 
+}
+
+.about-me-div-img {
+  flex: 0 0 384px;
+  height: 448px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-me-div {
+  flex: 1 1 500px; 
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.about-me-div-comp {
+  display: flex;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.about-me-div-computer {
+  display: flex;
+  gap: 136px;
+  min-width: 910px;
 }
