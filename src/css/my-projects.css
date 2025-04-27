@@ -1,0 +1,118 @@
+.iframe-style {
+  width: 100%;
+  height: auto;
+  border: none;
+  display: none;
+  border-radius: 16px;
+}
+
+.video-style {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+}
+
+.my-projects {
+  padding-top: 80px;
+  text-align: center;
+}
+
+.title-projects {
+  font-family: 'Impact', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.22;
+  display: inline-block;
+  margin: 0 auto 40px;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.list-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+}
+
+.list-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.list-item.hidden {
+  display: none;
+}
+
+.teck-skill {
+  font-weight: 300;
+  text-align: start;
+}
+
+.name-page {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: start;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.visit-link {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 12px 24px;
+  gap: 12px;
+  width: 125px;
+  background-color: #e4e5e6;
+  margin-left: auto;
+  transition: background-color 250ms ease-in-out;
+}
+
+.visit-link:hover {
+  background-color: #bbb;
+}
+
+.load-more {
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  padding: 0;
+  margin-top: 40px;
+  border: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: color 250ms ease-in-out;
+}
+
+.load-more:hover {
+  color: var(--accent-color);
+}
+
+.load-more::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.icon {
+  stroke: var(--accent-color);
+}
