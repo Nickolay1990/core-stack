@@ -55,26 +55,32 @@
   width: 35%;
 }
 
-.blue-span {
-  background-color: blue;
-}
-.red-span {
-  background-color: red;
-}
-
-.green-span {
-  background-color: green;
-}
-.pink-span {
-  background-color: pink;
-}
-
 .white-span {
   background-color: #f0f0f0;
 }
 
+.green-span {
+  background-color: #00b068;
+}
+
 .black-span {
   background-color: #292929;
+}
+
+.blue-span {
+  background-color: #220552;
+}
+
+.gold-span {
+  background-color: #d9cf41;
+}
+
+.green-dark-span {
+  background-color: #023011;
+}
+
+.pink-span {
+  background-color: #ff21d6;
 }
 
 .sidebar input:hover + .checkbox-wrapper {
