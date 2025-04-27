@@ -46,3 +46,80 @@
 .about-me-div {
   margin-bottom: 40px;
 }
+
+/* -------------------TABLET------------------- */
+
+@media screen and (min-width: 768px) {
+  .about-me-div-container {
+    position: relative;
+  }
+
+  .about-me-div-container::before {
+    content: '';
+    position: absolute;
+    width: 336px;
+    height: 336px;
+    background-image: url(/img/about_me/tab_about_me_decor_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 100px;
+    right: 5%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .about-me-div-container::before {
+      background-image: url(/img/about_me/tab_about_me_decor_bg@2x.png);
+    }
+  }
+
+  .about-me-section {
+    padding-top: 124px;
+  }
+
+  .about-me-h {
+    font-size: 108px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+  }
+
+  .about-me-all-h {
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
+
+  .about-me-div-img {
+    margin-top: 408px;
+    margin-bottom: 0;
+  }
+
+  .about-me-div {
+    flex: 1;
+    margin: 0;
+  }
+
+  .about-me-div-img picture,
+  .about-me-div-img img {
+    border-radius: 16px;
+  }
+  .about-me-tab {
+    display: flex;
+    column-gap: 32px;
+    row-gap: 60px;
+    flex-wrap: wrap;
+  }
+
+  .about-me-div-tab {
+    width: 336px;
+  }
+
+  .about-me-p-bio {
+    margin-bottom: 24px;
+  }
+
+  .about-me-li {
+    margin-bottom: 16px;
+  }
+}
