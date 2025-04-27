@@ -179,7 +179,7 @@
 
 .about-me-div-comp {
   display: flex;
-  gap:136px;
+  gap: 136px;
   margin-top: 40px;
 }
 
@@ -187,4 +187,8 @@
   display: flex;
   gap: 136px;
   min-width: 910px;
+}
+
+.about-me-h {
+  margin-bottom: 40px;
 }
