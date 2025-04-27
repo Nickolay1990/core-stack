@@ -94,11 +94,6 @@
     margin-right: 104px;
     position: relative;
   }
-  .faq-start-container::after {
-    position: absolute;
-    left: 32px;
-    z-index: 1;
-  }
   .title-faq {
     width: 520px;
     margin-bottom: 240px;
