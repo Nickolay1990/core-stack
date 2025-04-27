@@ -15,5 +15,8 @@ console.log('header');
     function toggleModal() {
      
       refs.modal.classList.toggle('is-open');
+      document.body.classList.toggle('no-scroll');
+
     }
-  
+
+    
