@@ -8,8 +8,6 @@
 
 .video-style {
   border-radius: 16px;
-  width: 100%;
-  height: auto;
 }
 
 .my-projects {
@@ -18,7 +16,7 @@
 }
 
 .title-projects {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   text-transform: uppercase;
   font-weight: 400;
   font-size: 52px;
@@ -51,8 +49,8 @@
 }
 
 .teck-skill {
-  font-weight: 300;
   text-align: start;
+  margin-bottom: 16px;
 }
 
 .name-page {
@@ -62,8 +60,7 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
   text-align: start;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .visit-link {
@@ -75,7 +72,7 @@
   padding: 12px 24px;
   gap: 12px;
   width: 125px;
-  background-color: #e4e5e6;
+  background-color: var(--techskills-gray-back-color);
   margin-left: auto;
   transition: background-color 250ms ease-in-out;
 }
