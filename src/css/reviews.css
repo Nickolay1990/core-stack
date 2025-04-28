@@ -17,7 +17,6 @@
   padding: 32px;
   background-color: var(--techskills-gray-back-color);
   border-radius: 16px;
-  margin-bottom: 24px;
 }
 
 .reviews-text {
@@ -57,6 +56,9 @@
 
 .arrow-left {
   transform: rotate(180deg);
+}
+.swiper-wrapper {
+  margin-bottom: 24px;
 }
 
 .reviews-nav-button:hover {
