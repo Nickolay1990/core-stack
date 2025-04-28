@@ -40,6 +40,10 @@ html.green-dark {
   --accent-color: #ff21d6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--general-font-family);
   font-size: 16px;
