@@ -168,7 +168,7 @@
   }
 
   .marquee {
-    max-width: 1517px;
+    min-width: 1517px;
     padding: 40px 0;
     font-size: 36px;
     line-height: 1.33;
