@@ -47,6 +47,11 @@
   margin-bottom: 40px;
 }
 
+.about-me-div-img picture,
+.about-me-div-img img {
+  border-radius: 16px;
+}
+
 /*-------------------TABLET------------------- */
 
 @media screen and (min-width: 768px) {
@@ -100,10 +105,7 @@
     margin: 0;
   }
 
-  .about-me-div-img picture,
-  .about-me-div-img img {
-    border-radius: 16px;
-  }
+ 
   .about-me-tab {
     display: flex;
     column-gap: 32px;
@@ -150,7 +152,6 @@
       background-image: url(/img/about_me/desk_about_me_decor_bg@2x.png);
     }
   }
-}
 
 .about-me-section {
   padding-top: 164px;
@@ -196,4 +197,5 @@
 
 .about-me-h {
   margin-bottom: 40px;
+}
 }
