@@ -4,8 +4,7 @@
 
 .marquee {
   width: 100%;
-  max-width: 1392px;
-  margin: 0 auto;
+  margin-left: -8px;
   display: flex;
   padding: 32px 0;
   overflow: hidden;
@@ -22,7 +21,7 @@
 }
 
 .marquee-horizontal {
-  margin-bottom: 16px;
+  /*margin-bottom: 16px;*/
   color: var(--general-color);
   background: var(--light-green-color);
 }
@@ -100,9 +99,9 @@
     rgba(255, 255, 255, 0) 100%
   );
   transform: skewX(-20deg);
-  animation: shine 2s infinite;
+  animation: shine 1500ms infinite;
   pointer-events: none; /* To avoid blocking clicks */
-  border-radius: 16px;
+  border-radius: 36px;
   z-index: 1;
 }
 
@@ -162,16 +161,21 @@
     transform: scale(1.2) rotate(45deg);
   }
 }
-@media (min-width: 768px) and (max-width: 1279px) {
+
+@media (min-width: 768px) {
   .tech-skills {
     padding-top: 124px;
   }
 
   .marquee {
-    max-width: 1517px;
     padding: 40px 0;
     font-size: 36px;
     line-height: 1.33;
     letter-spacing: 0.01em;
+  }
+}
+@media (min-width: 1280px) {
+  .tech-skills {
+    padding-top: 164px;
   }
 }
