@@ -57,8 +57,13 @@
   color: var(--accent-color);
 }
 
+.hero-section nav {
+  background-color: var(--techskills-gray-back-color);
+  padding: 32px 0;
+}
+
 @media screen and (min-resolution: 192dpi) {
-  .mobile-menu {
+  .hero-describe {
     background-image: url(/img/hero/mob_hero_and_meny_decor_bg@2x.png),
       linear-gradient(
         var(--general-background-color),
@@ -68,63 +73,58 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .hero-section {
-      padding-top: 60px;
+    padding-top: 60px;
   }
   .hero-container {
-      justify-content: center;
-      flex-direction: row;
-      flex-wrap: wrap;
-      
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .hero-title {
-     
-      font-size: 124px;
-      line-height: 1.16;
-      letter-spacing: 0.01em;
-      margin-bottom: 40px;
-      max-width: 768px;
-      
+    font-size: 124px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 40px;
+    max-width: 768px;
   }
 
   .hero-list {
-      
-      flex-direction: row;
-      gap: 40px;
-      
+    flex-direction: row;
+    gap: 40px;
   }
 
   .hero-describe {
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-bottom: 60px;
-      background-image: url(/img/hero/tab_hero_and_menu_decor_bg.png),
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    background-image: url(/img/hero/tab_hero_and_menu_decor_bg.png),
       linear-gradient(
         var(--general-background-color),
         var(--general-background-color)
       );
-      
   }
 
   .hero-text {
-      font-size: 20px;
-      max-width: 336px;
-      margin-top: 0;
-      margin-right: 32px;
+    font-size: 20px;
+    max-width: 336px;
+    margin-top: 0;
+    margin-right: 32px;
   }
-  
+
   picture {
-      order: 1;
+    order: 1;
   }
 
   .hero-img {
     border-radius: 26px;
   }
 
- 
+  .hero-section nav {
+    padding: 40px 0;
+  }
 
-  @media screen and (max-width: 1279px)  and (min-resolution: 192dpi) {
+  @media screen and (max-width: 1279px) and (min-resolution: 192dpi) {
     .hero-describe {
       background-image: url(/img/hero/tab_hero_and_menu_decor_bg@2x.png),
         linear-gradient(
@@ -132,57 +132,47 @@
           var(--general-background-color)
         );
     }
-}  
+  }
 }
 
 @media screen and (min-width: 1280px) {
-
   .hero-section {
     padding-top: 38px;
-}
+  }
   .hero-title {
-      font-size: 136px;
-      line-height: 1.47;
-      padding-top: 0;
-      margin-bottom: 0;
-      
-}
+    font-size: 136px;
+    line-height: 1.47;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
 
- 
- 
   .hero-text {
-      max-width: 592px;
-      margin-right: 0;
-
+    max-width: 592px;
+    margin-right: 0;
   }
 
   .hero-describe {
-   background-image: url(/img/hero/desk_hero_decor_bg.png),
-    linear-gradient(
-      var(--general-background-color),
-      var(--general-background-color)
-    );
-     margin-bottom: 90px;
-     position: relative;
-  }
-  picture {
-  position: absolute;
-  right: 0;
-  top: 0;
-  
-}
-
-@media screen and (min-resolution: 192dpi) {
-  .hero-describe {
-    background-image: url(/img/hero/desk_hero_decor_bg@2x.png),
+    background-image: url(/img/hero/desk_hero_decor_bg.png),
       linear-gradient(
         var(--general-background-color),
         var(--general-background-color)
       );
+    margin-bottom: 90px;
+    position: relative;
   }
-}  
+  picture {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-
-
+  @media screen and (min-resolution: 192dpi) {
+    .hero-describe {
+      background-image: url(/img/hero/desk_hero_decor_bg@2x.png),
+        linear-gradient(
+          var(--general-background-color),
+          var(--general-background-color)
+        );
+    }
+  }
 }
-
