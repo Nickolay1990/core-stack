@@ -4,15 +4,42 @@
   border: none;
   display: none;
   border-radius: 16px;
+  aspect-ratio: 16 / 9;
 }
 
 .video-style {
   border-radius: 16px;
 }
 
+@media screen and (min-width: 1280px) {
+  .iframe-style {
+    display: block;
+  }
+
+  .video-style {
+    display: none;
+  }
+}
+
 .my-projects {
   padding-top: 80px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .my-projects {
+    padding-top: 124px;
+  }
+
+  .video-style {
+    border-radius: 24px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .my-projects {
+    padding-top: 164px;
+  }
 }
 
 .title-projects {
@@ -25,10 +52,37 @@
   margin: 0 auto 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .title-projects {
+    margin-bottom: 60px;
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .title-projects {
+    margin-bottom: 80px;
+  }
+}
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .projects-list {
+    gap: 60px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .projects-list {
+    gap: 80px;
+  }
 }
 
 .list-item {
@@ -37,6 +91,12 @@
   flex-direction: column;
   gap: 12px;
   opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .list-item {
+    gap: 16px;
+  }
 }
 
 .list-item.show {
@@ -51,6 +111,12 @@
 .teck-skill {
   text-align: start;
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .teck-skill {
+    margin-bottom: 20px;
+  }
 }
 
 .name-page {
@@ -72,6 +138,7 @@
   padding: 12px 24px;
   gap: 12px;
   width: 125px;
+  height: auto;
   background-color: var(--techskills-gray-back-color);
   margin-left: auto;
   transition: background-color 250ms ease-in-out;
@@ -93,6 +160,7 @@
   line-height: 1.56;
   text-transform: uppercase;
   overflow: hidden;
+  color: var(--general-color);
   transition: color 250ms ease-in-out;
 }
 
@@ -112,4 +180,23 @@
 
 .icon {
   stroke: var(--accent-color);
+}
+
+@media screen and (min-width: 768px) {
+  .container-title {
+    display: flex;
+    align-items: center;
+  }
+  .name-page {
+    margin-bottom: 0;
+    font-size: 36px;
+    line-height: 1.33;
+    letter-spacing: 0.01em;
+  }
+
+  .load-more {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-top: 72px;
+  }
 }
