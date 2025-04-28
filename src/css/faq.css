@@ -1,0 +1,105 @@
+.sect-faq {
+  padding-top: 80px;
+}
+.title-faq {
+  margin-bottom: 40px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  text-transform: uppercase;
+  color: var(--general-color);
+}
+.faq-start-container img {
+  display: none;
+}
+.ac .ac-trigger::after {
+  display: none;
+}
+.ac-btn-text {
+  margin-right: 16px;
+}
+.accordion-list .ac .ac-icon-up {
+  transform: translate(50%, 0) rotate(180deg);
+  position: absolute;
+  right: 24px;
+  top: 5px;
+  fill: transparent;
+  stroke: var(--general-color);
+  transition: transform 0.3s ease-in-out;
+}
+.accordion-list .ac.is-active .ac-icon-up {
+  transform: translate(50%, 0) rotate(0deg);
+}
+.accordion-list .ac .ac-trigger {
+  font-family: var(--general-font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  text-transform: uppercase;
+  color: var(--general-color);
+}
+.accordion-list .ac .ac-trigger:focus {
+  color: var(--general-color);
+}
+.accordion-list .ac {
+  background-color: var(--general-background-color);
+  border: none;
+  border-bottom: 1px solid var(--techskills-gray-back-color);
+  margin-bottom: 0;
+  padding: 28px 24px;
+}
+.ac.is-active {
+  border-radius: 16px;
+  background-color: var(--light-green-color);
+}
+.accordion-list .ac .ac-panel .ac-text {
+  font-family: var(--general-font-family);
+  font-weight: 300;
+  color: var(--general-color);
+}
+
+@media only screen and (min-width: 768px) {
+  .sect-faq {
+    padding-top: 124px;
+  }
+  .title-faq {
+    margin-bottom: 60px;
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+  .accordion-list .ac .ac-trigger {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .ac-btn-text {
+    margin-right: 24px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .sect-faq {
+    padding-top: 164px;
+  }
+  .faq-start-container img {
+    display: block;
+  }
+  .faq-container {
+    display: flex;
+  }
+  .faq-start-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 104px;
+    position: relative;
+  }
+  .title-faq {
+    width: 520px;
+    margin-bottom: 240px;
+  }
+  .accordion-list {
+    margin-top: 276px;
+    width: 592px;
+  }
+}
