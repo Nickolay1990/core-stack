@@ -48,7 +48,7 @@
 }
 
 .reviews-nav-button {
-  border: 1px solid var(--techskills-gray-back-color);
+  border: 1px solid var(--general-color);
   border-radius: 8px;
   padding: 12px;
   width: 48px;
@@ -56,12 +56,31 @@
 }
 
 .arrow-left {
+  transform: rotate(180deg);
 }
 
 .reviews-nav-button:hover {
   border: 1px solid var(--general-color);
+  background-color: var(--techskills-gray-back-color);
 }
-.icon-active {
+.reviews-nav-button:disabled {
+  opacity: 0.3;
 }
-.icon-inactive {
+
+@media only screen and (min-width: 768px) {
+  .reviews-section {
+    padding-top: 124px;
+  }
+  .reviews-title {
+    margin-bottom: 60px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .reviews-section {
+    padding-top: 164px;
+  }
+  .reviews-title {
+    margin-bottom: 80px;
+  }
 }
