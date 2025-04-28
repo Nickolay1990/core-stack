@@ -149,11 +149,66 @@
         justify-content: space-around;
     }
     
+    .form-wrapper {
+        width: 100%;
+    }
+    
     .form-btn {
         min-width: 173px;
         margin-left: 0;
     }
   }
 
+  @media only screen and (min-width: 1280px) {
+    .together {
+        padding-top: 164px;
+    }
+    
+    .together-container {
+        height: 616px;
+        width: 1216px;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 124px;
+    }
 
+    .together-container::before {
+        width: 526px;
+        height: 408px;
+        background-image: url(/img/work_together/desk_work_together_decor_bg.png);
+        top: -105px;
+        right: 45px;
+    }
+    .together-title {
+        width: 517px;
+        height: 248px;
+        margin-bottom: 80px;
+        margin-right: 300px;
+    }
+    .contacts {
+        width: 488px;
+        height: 288px;
+        margin-bottom: 40px;
+        /*  */
+        margin-right: auto;
+        align-items:stretch ;
+        /* justify-content: space-around; */
+    }
+    .contacts-title {
+        margin-bottom: 120px;
+    }
+    .contacts-list {
+        width: 639px;
+        height: 24px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .form-wrapper {
+        width: 592px;
+        height: 288px;
+        
+    }
+  }
 
