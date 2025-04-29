@@ -60,6 +60,10 @@
   transition: stroke-dashoffset 0.3s ease;
 }
 
+#videoFrame {
+  border: none;
+}
+
 @media (min-width: 768px) {
   .scroll__up {
     width: 45px;
