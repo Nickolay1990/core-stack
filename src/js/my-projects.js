@@ -1,5 +1,15 @@
 const loadMoreBtn = document.querySelector('.load-more');
 const projectItems = document.querySelectorAll('.list-item');
+import business from '../public/video/business.mp4';
+import harvest from '../public/video/fresh-harvest.mp4';
+import getBody from '../public/video/get-body.mp4';
+import jewelry from '../public/video/jewelry.mp4';
+import learning from '../public/video/learning.mp4';
+import mimino from '../public/video/mimino.mp4';
+import traditional from '../public/video/traditional.mp4';
+import transform from '../public/video/transform-body.mp4';
+import vegetables from '../public/video/vegetables.mp4';
+import wallet from '../public/video/wallet.mp4';
 
 const iframeLinks = [
   'https://power-pulse.f.goit.study/welcome/',
@@ -15,16 +25,16 @@ const iframeLinks = [
 ];
 
 const videoSource = [
-  './video/transform-body.mp4',
-  './video/mimino.mp4',
-  './video/traditional.mp4',
-  './video/vegetables.mp4',
-  './video/wallet.mp4',
-  './video/jewelry.mp4',
-  './video/get-body.mp4',
-  './video/fresh-harvest.mp4',
-  './video/business.mp4',
-  './video/learning.mp4',
+  transform,
+  mimino,
+  traditional,
+  vegetables,
+  wallet,
+  jewelry,
+  getBody,
+  harvest,
+  business,
+  learning,
 ];
 
 let visibleCount = 3;
