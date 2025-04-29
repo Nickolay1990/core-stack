@@ -1,7 +1,6 @@
 import { sendContactForm } from './api.js';
 import iziToast from 'izitoast';
 import svg from '../img/sprite.svg';
-console.log(`${svg}#icon-x`);
 
 const form = document.getElementById('contact-form');
 
@@ -47,8 +46,7 @@ form.addEventListener('submit', async event => {
     iziToast.error({
       title: 'Something went wrong. Please try again!',
       position: 'topRight',
-      backgroundColor: 'var(--accent-color)',
-      titleColor: 'var(--general-color-dark-theme)',
+      backgroundColor: 'red',
     });
   }
 });

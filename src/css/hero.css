@@ -47,6 +47,8 @@
   justify-content: center;
   flex-direction: column;
   gap: 24px;
+  padding: 32px 0;
+  background-color: var(--techskills-gray-back-color);
 }
 
 .hero-link {
@@ -176,5 +178,3 @@
     }
   }
 }
-
-

@@ -145,7 +145,12 @@ function handleError(list, error) {
 
 // Функція показу повідомлення про помилку через iziToast
 function showError(message) {
-  iziToast.error({ title: 'Error', message });
+  iziToast.error({
+    title: 'Error',
+    message,
+    position: 'topRight',
+    backgroundColor: 'red',
+  });
 }
 
 // Функція показу повідомлення "Not found" в списку
