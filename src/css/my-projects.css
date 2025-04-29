@@ -5,7 +5,54 @@
   display: none;
   border-radius: 16px;
   aspect-ratio: 16 / 9;
+  pointer-events: none;
 }
+
+.iframe-button {
+  position: absolute;
+  top: 85px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: var(--general-background-color);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.iframe-button:hover {
+  background-color: var(--light-green-color);
+}
+
+.iframe-wrapper:hover .iframe-button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.iframe-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 1280px) {
+  .iframe-wrapper {
+    border-radius: 24px;
+  }
+}
+
+/* ---------------------- */
 
 .video-style {
   border-radius: 16px;

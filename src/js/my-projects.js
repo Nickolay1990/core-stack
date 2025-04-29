@@ -1,5 +1,4 @@
-const loadMoreBtn = document.querySelector('.load-more');
-const projectItems = document.querySelectorAll('.list-item');
+
 import business from '../video/business.mp4';
 import harvest from '../video/fresh-harvest.mp4';
 import getBody from '../video/get-body.mp4';
@@ -10,6 +9,9 @@ import traditional from '../video/traditional.mp4';
 import transform from '../video/transform-body.mp4';
 import vegetables from '../video/vegetables.mp4';
 import wallet from '../video/wallet.mp4';
+
+const loadMoreBtn = document.querySelector('.load-more');
+const projectsList = document.querySelector('.projects-list');
 
 const iframeLinks = [
   'https://power-pulse.f.goit.study/welcome/',
@@ -37,12 +39,14 @@ const videoSource = [
   learning,
 ];
 
+const listItems = Array.from(document.querySelectorAll('.projects-list .list-item'));
+
 let visibleCount = 3;
 const itemsPerClick = 3;
 let isExpanded = false;
 
 function showItems() {
-  projectItems.forEach(function (item, index) {
+  listItems.forEach((item, index) => {
     if (index < visibleCount) {
       item.classList.add('show');
       item.classList.remove('hidden');
@@ -54,7 +58,7 @@ function showItems() {
 }
 
 function scrollToNewItem(startIndex) {
-  const targetItem = projectItems[startIndex];
+  const targetItem = listItems[startIndex];
   if (targetItem) {
     targetItem.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -65,8 +69,8 @@ function handleLoadMoreClick() {
     const previousVisibleCount = visibleCount;
     visibleCount += itemsPerClick;
 
-    if (visibleCount >= projectItems.length) {
-      visibleCount = projectItems.length;
+    if (visibleCount >= listItems.length) {
+      visibleCount = listItems.length;
       isExpanded = true;
       loadMoreBtn.textContent = 'Show less';
     }
@@ -77,7 +81,7 @@ function handleLoadMoreClick() {
     visibleCount = 3;
     showItems();
 
-    const firstCard = projectItems[0];
+    const firstCard = listItems[0];
     if (firstCard) {
       firstCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -87,57 +91,56 @@ function handleLoadMoreClick() {
   }
 }
 
-function loadIframesOnDesktop() {
-  if (window.matchMedia('(min-width: 1280px)').matches) {
-    projectItems.forEach((item, index) => {
-      const cardText = item.querySelector('.card-text');
-      const video = item.querySelector('video');
-      const iframe = item.querySelector('iframe');
-      if (iframe) {
-        iframe.remove();
-      }
-      if (video) {
-        video.remove();
-      }
-      if (iframeLinks[index]) {
-        const iframe = document.createElement('iframe');
-        iframe.src = iframeLinks[index];
-        iframe.className = 'iframe-style';
-        iframe.loading = 'lazy';
-        item.insertBefore(iframe, cardText);
-      }
-    });
-  } else {
-    projectItems.forEach((item, index) => {
-      const cardText = item.querySelector('.card-text');
-      const iframe = item.querySelector('iframe');
-      const video = item.querySelector('video');
-      if (video) {
-        video.remove();
-      }
-      if (iframe) {
-        iframe.remove();
-      }
-      if (videoSource[index]) {
-        const video = document.createElement('video');
-        video.className = 'video-style';
-        video.src = videoSource[index];
-        video.autoplay = true;
-        video.loop = true;
-        video.muted = true;
-        video.playsInline = true;
-        video.preload = 'none';
+function renderMediaContent() {
+  const isDesktop = window.matchMedia('(min-width: 1280px)').matches;
 
-        item.insertBefore(video, cardText);
+  listItems.forEach((item, index) => {
+    const cardText = item.querySelector('.card-text');
+    let mediaHTML = '';
+
+    if (isDesktop) {
+      mediaHTML = `
+        <div class="iframe-wrapper">
+          <iframe src="${iframeLinks[index]}" class="iframe-style" loading="lazy"></iframe>
+          <button type="button" class="iframe-button">Show preview</button>
+        </div>
+      `;
+    } else {
+      mediaHTML = `
+        <video class="video-style" src="${videoSource[index]}" autoplay loop muted playsinline preload="none"></video>
+      `;
+    }
+
+    cardText.insertAdjacentHTML('beforebegin', mediaHTML);
+  });
+
+  if (isDesktop) {
+    projectsList.addEventListener('click', (event) => {
+      if (event.target.classList.contains('iframe-button')) {
+        const iframe = event.target.previousElementSibling;
+        toggleButtonIframe(iframe, event.target);
       }
     });
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+function toggleButtonIframe(iframe, button) {
+  const active = iframe.style.pointerEvents === 'auto';
+  iframe.style.pointerEvents = active ? 'none' : 'auto';
+  button.textContent = active ? 'Show preview' : 'Hide preview';
+}
+
+document.addEventListener('DOMContentLoaded', () => {
   showItems();
   loadMoreBtn.addEventListener('click', handleLoadMoreClick);
-  loadIframesOnDesktop();
+  renderMediaContent();
+
   const mediaQuery = window.matchMedia('(min-width: 1280px)');
-  mediaQuery.addEventListener('change', loadIframesOnDesktop);
+  mediaQuery.addEventListener('change', () => {
+    listItems.forEach(item => {
+      const oldMedia = item.querySelector('.iframe-wrapper') || item.querySelector('video');
+      if (oldMedia) oldMedia.remove();
+    });
+    renderMediaContent();
+  });
 });
