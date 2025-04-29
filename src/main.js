@@ -10,3 +10,4 @@ import './js/reviews';
 import './js/work-together';
 import './js/footer';
 import './js/sidebar';
+import './js/surprise';

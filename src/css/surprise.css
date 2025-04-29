@@ -1,0 +1,111 @@
+/*прокрутка*/
+.scroll__up {
+  visibility: hidden;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 255, 0.15) 0%,
+    rgba(0, 255, 255, 0) 70%
+  );
+  backdrop-filter: blur(4px);
+  transform: translateY(30px) rotateX(60deg) scale(0.8);
+  transform-style: preserve-3d;
+  transition: opacity 0.4s ease,
+    transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px; /* глибина перспективи */
+}
+
+.scroll__up-svg {
+  width: 40px;
+  height: 40px;
+  right: 15px;
+  bottom: 15px;
+  filter: drop-shadow(0 0 8px #00f0ff);
+}
+
+.scroll__up-active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg) scale(1);
+}
+
+.scroll__up-active .scroll__up-svg {
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    filter: drop-shadow(0 0 8px #00f0ff);
+  }
+  to {
+    filter: drop-shadow(0 0 18px #ff00ff);
+  }
+}
+
+.scroll__up-svg-path {
+  fill: none;
+  box-sizing: border-box;
+  stroke-width: 4px;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .scroll__up {
+    width: 45px;
+    height: 45px;
+    right: 20px;
+    bottom: 20px;
+  }
+}
+/*пісня про життя фулстек розробника*/
+.icon-surprise {
+  margin-left: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.icon-surprise:hover {
+  transform: scale(2.1);
+}
+.modal-surprise {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.modal-content-surprise {
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 700px;
+}
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: #bbb;
+}
+iframe {
+  width: 100%;
+  height: 400px;
+}
