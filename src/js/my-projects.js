@@ -15,16 +15,16 @@ const iframeLinks = [
 ];
 
 const videoSource = [
-  '/video/transform-body.mp4',
-  '/video/mimino.mp4',
-  '/video/traditional.mp4',
-  '/video/vegetables.mp4',
-  '/video/wallet.mp4',
-  '/video/jewelry.mp4',
-  '/video/get-body.mp4',
-  '/video/fresh-harvest.mp4',
-  '/video/business.mp4',
-  '/video/learning.mp4',
+  './video/transform-body.mp4',
+  './video/mimino.mp4',
+  './video/traditional.mp4',
+  './video/vegetables.mp4',
+  './video/wallet.mp4',
+  './video/jewelry.mp4',
+  './video/get-body.mp4',
+  './video/fresh-harvest.mp4',
+  './video/business.mp4',
+  './video/learning.mp4',
 ];
 
 let visibleCount = 3;
