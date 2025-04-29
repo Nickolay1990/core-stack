@@ -159,7 +159,7 @@
   }
 
   .hero-describe {
-    background-image: url(/img/hero/desk_hero_decor_bg.png),
+    background-image: url(/img/hero/back-desc.png),
       linear-gradient(
         var(--general-background-color),
         var(--general-background-color)
@@ -177,15 +177,5 @@
     position: absolute;
     right: 32px;
     top: 38px;
-  }
-
-  @media screen and (min-resolution: 192dpi) {
-    .hero-describe {
-      background-image: url(/img/hero/desk_hero_decor_bg@2x.png),
-        linear-gradient(
-          var(--general-background-color),
-          var(--general-background-color)
-        );
-    }
   }
 }
