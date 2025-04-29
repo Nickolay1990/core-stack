@@ -6,11 +6,10 @@ export async function fetchReviews() {
   );
   return response.data;
 }
-console.log('api');
 
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/requests';
 
 export async function sendContactForm(data) {
   const response = await axios.post(BASE_URL, data);
-  return response.data; 
+  return response.data;
 }

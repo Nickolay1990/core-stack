@@ -215,6 +215,12 @@
     pointer-events: none;
     z-index: 1;
   }
+
+  @media screen and (min-resolution: 192dpi) {
+    .together-container::before {
+      background-image: url(/img/work_together/tab_work_together_decor_bg@2x.png);
+    }
+  }
   .together-title {
     font-size: 108px;
     line-height: 1.15;
@@ -272,6 +278,13 @@
     top: -105px;
     right: 45px;
   }
+
+  @media screen and (min-resolution: 192dpi) {
+    .together-container::before {
+      background-image: url(/img/work_together/desk_work_together_decor_bg@2x.png);
+    }
+  }
+
   .together-title {
     width: 517px;
     height: 248px;

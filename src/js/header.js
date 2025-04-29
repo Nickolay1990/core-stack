@@ -4,8 +4,6 @@ const refs = {
   footerLinks: document.querySelectorAll('[data-scrol-down]'),
 };
 
-console.log(refs.footerLinks);
-
 refs.changeModalBtn.forEach(link => {
   link.addEventListener('click', toggleModal);
 });
