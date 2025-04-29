@@ -1,5 +1,7 @@
 import { sendContactForm } from './api.js';
 import iziToast from 'izitoast';
+import svg from '../img/sprite.svg';
+console.log(`${svg}#icon-x`);
 
 const form = document.getElementById('contact-form');
 
@@ -59,7 +61,7 @@ function showSuccessModal(title, message) {
     <div class="modal-content">
       <button class="mobile-menu-close" type="button" id="modal-close-btn">
         <svg class="svg-icon-close" width="32" height="32">
-          <use href="/img/sprite.svg#icon-x"></use>
+          <use href="${svg}#icon-x"></use>
         </svg>
       </button>
       <h2 class="modal-title">${title}</h2>
