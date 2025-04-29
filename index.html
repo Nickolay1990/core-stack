@@ -14,7 +14,7 @@
     <script type="module" crossorigin src="/core-stack/index.js"></script>
     <link rel="modulepreload" crossorigin href="/core-stack/assets/vendor-mVn1gdgQ.js">
     <link rel="stylesheet" crossorigin href="/core-stack/assets/vendor-CNsKelwJ.css">
-    <link rel="stylesheet" crossorigin href="/core-stack/assets/index-wFWbLHgh.css">
+    <link rel="stylesheet" crossorigin href="/core-stack/assets/index-OOKlOsv4.css">
   </head>
   <body>
     <header>
@@ -234,6 +234,11 @@
         <span class="dot dot-horizontal"></span> TypeScript&nbsp;
       </p>
     </div>
+  </div>
+  <div class="tech-skill">
+    <svg class="icon-surprise" width="16" height="16">
+      <use href="/core-stack/assets/sprite-DDHFpYjH.svg#icon-surprise"></use>
+    </svg>
   </div>
   <div class="marquee marquee-tilted">
     <div class="marquee-inner">
@@ -827,6 +832,56 @@
 </section>
 
     </footer>
-    
+    <!-- scroll__up -->
+<button class="scroll__up">
+  <svg
+    class="scroll__up-svg"
+    viewBox="0 0 100 100"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    stroke-width="4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <defs>
+      <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00f0ff">
+          <animate
+            attributeName="stop-color"
+            values="#00f0ff; #ff00ff; #00ff88; #00f0ff"
+            dur="6s"
+            repeatCount="indefinite"
+          />
+        </stop>
+        <stop offset="100%" stop-color="#ff00ff">
+          <animate
+            attributeName="stop-color"
+            values="#ff00ff; #00ff88; #00f0ff; #ff00ff"
+            dur="6s"
+            repeatCount="indefinite"
+          />
+        </stop>
+      </linearGradient>
+    </defs>
+
+    <circle
+      class="scroll__up-svg-path"
+      cx="50"
+      cy="50"
+      r="45"
+      stroke="url(#gradientStroke)"
+    />
+    <polyline points="35,55 50,40 65,55" stroke="white" />
+    <line x1="50" y1="40" x2="50" y2="70" stroke="white" />
+  </svg>
+</button>
+<!-- surprise -->
+<div id="videoModal" class="modal-surprise">
+  <div class="modal-content-surprise">
+    <span class="close">&times;</span>
+    <iframe id="videoFrame" width="560" height="315" allowfullscreen></iframe>
+  </div>
+</div>
+
   </body>
 </html>
