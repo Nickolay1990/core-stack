@@ -1,9 +1,11 @@
 .tech-skills {
   padding-top: 80px;
+
+  overflow-x: clip;
 }
 
 .marquee {
-  width: 100%;
+  width: 103%;
   margin-left: -8px;
   display: flex;
   padding: 32px 0;
