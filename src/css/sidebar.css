@@ -89,7 +89,7 @@
 }
 
 .sidebar input:checked + .checkbox-wrapper svg {
-  fill: gold;
+  fill: #3ef907;
 }
 
 .checked-picture {

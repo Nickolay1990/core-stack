@@ -138,7 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
   showItems();
   loadMoreBtn.addEventListener('click', handleLoadMoreClick);
   loadIframesOnDesktop();
+  const mediaQuery = window.matchMedia('(min-width: 1280px)');
+  mediaQuery.addEventListener('change', loadIframesOnDesktop);
 });
-
-const mediaQuery = window.matchMedia('(min-width: 1280px)');
-mediaQuery.addEventListener('change', loadIframesOnDesktop);
