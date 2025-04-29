@@ -12,7 +12,6 @@ const iframeLinks = [
   'https://z9877969.github.io/fruits_landing/',
   'https://tate-t.github.io/StarlightStudio/',
   'https://tkachenkokaterina.github.io/english-excellence/',
-
 ];
 
 const videoSource = [
@@ -25,7 +24,7 @@ const videoSource = [
   '/video/get-body.mp4',
   '/video/fresh-harvest.mp4',
   '/video/business.mp4',
-  '/video/learning.mp4'
+  '/video/learning.mp4',
 ];
 
 let visibleCount = 3;
@@ -33,7 +32,7 @@ const itemsPerClick = 3;
 let isExpanded = false;
 
 function showItems() {
-  projectItems.forEach(function(item, index) {
+  projectItems.forEach(function (item, index) {
     if (index < visibleCount) {
       item.classList.add('show');
       item.classList.remove('hidden');
@@ -64,7 +63,6 @@ function handleLoadMoreClick() {
 
     showItems();
     scrollToNewItem(previousVisibleCount);
-
   } else {
     visibleCount = 3;
     showItems();
@@ -90,13 +88,13 @@ function loadIframesOnDesktop() {
       }
       if (video) {
         video.remove();
-        }
+      }
       if (iframeLinks[index]) {
         const iframe = document.createElement('iframe');
         iframe.src = iframeLinks[index];
         iframe.className = 'iframe-style';
         iframe.loading = 'lazy';
-          item.insertBefore(iframe, cardText);
+        item.insertBefore(iframe, cardText);
       }
     });
   } else {
@@ -125,8 +123,8 @@ function loadIframesOnDesktop() {
     });
   }
 }
- 
-document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function () {
   showItems();
   loadMoreBtn.addEventListener('click', handleLoadMoreClick);
   loadIframesOnDesktop();
