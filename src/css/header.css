@@ -56,11 +56,8 @@
   background-position: center;
   background-size: cover;
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms;
+  transform: translateX(-100%);
 }
 
 .svg-icon-close {
@@ -85,10 +82,8 @@
 }
 
 .mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
   z-index: 999;
+  transform: translateX(0);
 }
 
 .mobile-menu-container {
@@ -159,4 +154,125 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--general-background-color);
+  z-index: 999;
+  box-shadow: 0 20px 50px 0 var(--techskills-gray-back-color);
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .header-logo {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 166px;
+  }
+  .header-order-link {
+    border-radius: 8px;
+    width: 217px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .mobile-menu {
+    background-image: url(/img/hero/tab_hero_and_menu_decor_bg.png),
+      linear-gradient(
+        var(--general-background-color),
+        var(--general-background-color)
+      );
+  }
+
+  .mobile-menu-close {
+    top: 32px;
+    right: 32px;
+  }
+
+  .svg-icon-close {
+    width: 100%;
+    height: 100%;
+  }
+
+  .mobile-menu-container {
+    padding: 32px 32px;
+  }
+
+  .mobile-menu-logo {
+    font-size: 32px;
+    letter-spacing: 0.05em;
+  }
+
+  .menu-wrapper {
+    padding-bottom: 0;
+  }
+
+  .mobile-order-link {
+    display: none;
+  }
+
+  .mobile-menu {
+    transform: translateY(-100%);
+  }
+}
+
+@media screen and (max-width: 1279px) and (min-resolution: 192dpi) {
+  .mobile-menu {
+    background-image: url(/img/hero/tab_hero_and_menu_decor_bg@2x.png),
+      linear-gradient(
+        var(--general-background-color),
+        var(--general-background-color)
+      );
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .header-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 40px;
+  }
+  .header-nav-link {
+    color: var(--general-color-light-theme);
+    transition: color 250ms;
+  }
+
+  .header-logo {
+    margin-right: 421px;
+  }
+  .header-nav {
+    gap: 0;
+  }
+}
+
+.header-nav-link:hover {
+  color: var(--accent-color);
 }

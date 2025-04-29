@@ -1,4 +1,4 @@
-.sect-faq {
+.faq {
   padding-top: 80px;
 }
 .title-faq {
@@ -17,6 +17,7 @@
   display: none;
 }
 .ac-btn-text {
+  display: block;
   margin-right: 16px;
 }
 .accordion-list .ac .ac-icon-up {
@@ -60,7 +61,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .sect-faq {
+  .faq {
     padding-top: 124px;
   }
   .title-faq {
@@ -79,7 +80,7 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .sect-faq {
+  .faq {
     padding-top: 164px;
   }
   .faq-start-container img {
