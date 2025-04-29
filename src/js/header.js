@@ -1,16 +1,9 @@
 const refs = {
-  openModalBtn: document.querySelector('[data-menu-open]'),
-
-  closeModalBtn: document.querySelector('[data-menu-close]'),
-
+  changeModalBtn: document.querySelectorAll('[data-menu-handler]'),
   modal: document.querySelector('[data-menu]'),
-  closeModalLinks: document.querySelectorAll('.mobile-nav-link, .mobile-order-link')
 };
 
-refs.openModalBtn.addEventListener('click', toggleModal);
-refs.closeModalBtn.addEventListener('click', toggleModal);
-
-refs.closeModalLinks.forEach(link => {
+refs.changeModalBtn.forEach(link => {
   link.addEventListener('click', toggleModal);
 });
 
