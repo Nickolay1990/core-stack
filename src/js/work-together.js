@@ -17,7 +17,7 @@ emailInput.addEventListener('input', () => {
   }
 });
 
-form.addEventListener('submit', async (event) => {
+form.addEventListener('submit', async event => {
   event.preventDefault();
 
   const email = form.elements.email.value.trim();
@@ -43,10 +43,10 @@ form.addEventListener('submit', async (event) => {
     console.error('Error:', error);
 
     iziToast.error({
-      title: "Something went wrong. Please try again!",
-      position: "topRight",
-      backgroundColor: "var(--accent-color)",
-      titleColor: "var(--general-color-dark-theme)",
+      title: 'Something went wrong. Please try again!',
+      position: 'topRight',
+      backgroundColor: 'var(--accent-color)',
+      titleColor: 'var(--general-color-dark-theme)',
     });
   }
 });
@@ -55,27 +55,42 @@ function showSuccessModal(title, message) {
   const modalBackdrop = document.createElement('div');
   modalBackdrop.classList.add('modal-backdrop');
 
-  
   modalBackdrop.innerHTML = `
     <div class="modal-content">
-      <button id="modal-close-btn" class="modal-close">&times;</button>
+      <button class="mobile-menu-close" type="button" id="modal-close-btn">
+        <svg class="svg-icon-close" width="32" height="32">
+          <use href="/img/sprite.svg#icon-x"></use>
+        </svg>
+      </button>
       <h2 class="modal-title">${title}</h2>
       <p class="modal-item">${message}</p>
     </div>
   `;
 
   document.body.appendChild(modalBackdrop);
+  blockScroll(true);
 
   const closeBtn = modalBackdrop.querySelector('#modal-close-btn');
   closeBtn.addEventListener('click', () => {
     modalBackdrop.remove();
     validIcon.classList.remove('visible');
+    blockScroll(false);
   });
 
-  modalBackdrop.addEventListener('click', (event) => {
+  modalBackdrop.addEventListener('click', event => {
     if (event.target === modalBackdrop) {
       modalBackdrop.remove();
       validIcon.classList.remove('visible');
+      blockScroll(false);
     }
   });
+}
+
+function blockScroll(block) {
+  const body = document.body;
+  if (block) {
+    body.classList.add('no-scroll');
+    return;
+  }
+  body.classList.remove('no-scroll');
 }
