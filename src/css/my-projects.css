@@ -146,7 +146,7 @@
 }
 
 .visit-link:hover {
-  background-color: #bbb;
+  background-color: var(--hover-projects);
 }
 
 .load-more {

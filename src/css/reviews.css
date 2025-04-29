@@ -48,6 +48,7 @@
 
 .reviews-nav-button {
   border: 1px solid var(--general-color);
+  background-color: transparent;
   border-radius: 8px;
   padding: 12px;
   width: 48px;
@@ -67,6 +68,11 @@
 }
 .reviews-nav-button:disabled {
   opacity: 0.3;
+}
+
+.reviews-nav-button svg {
+  fill: var(--general-color);
+  stroke: var(--general-color);
 }
 
 @media only screen and (min-width: 768px) {

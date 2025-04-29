@@ -16,7 +16,7 @@
 }
 
 .about-me-ul-all li::marker {
-  color: #00b068;
+  color: var(--accent-color);
 }
 
 .about-me-h {

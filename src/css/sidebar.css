@@ -2,7 +2,7 @@
   background-color: var(--light-green-color);
 
   position: fixed;
-  top: 10%;
+  top: 20%;
   left: 0;
   border-radius: 0 0 15px 0;
   padding: 15px;
@@ -41,6 +41,7 @@
   overflow: hidden;
   transition: transform 250ms;
   position: relative;
+  cursor: pointer;
 }
 
 .checkbox-wrapper span {
@@ -80,7 +81,7 @@
 }
 
 .pink-span {
-  background-color: #ff21d6;
+  background-color: #cc6600;
 }
 
 .sidebar input:hover + .checkbox-wrapper {

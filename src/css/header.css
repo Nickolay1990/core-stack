@@ -36,6 +36,7 @@
 }
 .header-order-link {
   display: none;
+  transition: background 250ms;
 }
 
 .mobile-menu {
@@ -162,6 +163,10 @@ header {
   background-color: var(--general-background-color);
   z-index: 999;
   box-shadow: 0 20px 50px 0 var(--techskills-gray-back-color);
+}
+
+.header-order-link:hover {
+  background-color: var(--light-green-color);
 }
 
 @media screen and (min-width: 768px) {
