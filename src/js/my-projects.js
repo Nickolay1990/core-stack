@@ -88,7 +88,7 @@ function handleLoadMoreClick() {
 }
 
 function loadIframesOnDesktop() {
-  if (window.innerWidth >= 1280) {
+  if (window.matchMedia('(min-width: 1280px)').matches) {
     projectItems.forEach((item, index) => {
       const cardText = item.querySelector('.card-text');
       const video = item.querySelector('video');
@@ -138,5 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
   showItems();
   loadMoreBtn.addEventListener('click', handleLoadMoreClick);
   loadIframesOnDesktop();
-  window.addEventListener('resize', loadIframesOnDesktop);
 });
+
+const mediaQuery = window.matchMedia('(min-width: 1280px)');
+mediaQuery.addEventListener('change', loadIframesOnDesktop);

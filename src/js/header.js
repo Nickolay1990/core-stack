@@ -28,7 +28,7 @@ function scrolDown(event) {
     top: sectionBottom - window.innerHeight,
   });
 
-  if (window.innerWidth < 768) {
+  if (this.closest('.mobile-order-link')) {
     toggleModal();
   }
 }
