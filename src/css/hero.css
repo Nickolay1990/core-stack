@@ -139,13 +139,18 @@
 
 @media screen and (min-width: 1280px) {
   .hero-section {
-    padding-top: 38px;
+    padding-top: 0px;
   }
+
+  .hero-container {
+    position: relative;
+  }
+
   .hero-title {
     font-size: 136px;
-    line-height: 1.47;
+    line-height: 1.14;
     padding-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 60px;
   }
 
   .hero-text {
@@ -159,13 +164,19 @@
         var(--general-background-color),
         var(--general-background-color)
       );
-    margin-bottom: 90px;
-    position: relative;
+    padding-bottom: 90px;
+    /* position: relative; */
+    padding-top: 90px;
+    margin-bottom: 0;
+    background-position: bottom;
+    background-size: contain;
+    margin-right: auto;
+    width: 728px;
   }
   .hero-section picture {
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 32px;
+    top: 38px;
   }
 
   @media screen and (min-resolution: 192dpi) {

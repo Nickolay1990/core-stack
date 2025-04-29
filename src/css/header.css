@@ -197,7 +197,7 @@ header {
     background-color: var(--accent-color);
     font-weight: 500;
     text-transform: uppercase;
-    color: #fff;
+    color: var(--general-background-color);
   }
 
   .mobile-menu {

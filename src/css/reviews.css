@@ -56,8 +56,9 @@
 }
 
 .arrow-left {
-  transform: rotate(180deg);
+  transform: rotateY(180deg);
 }
+
 .swiper-wrapper {
   margin-bottom: 24px;
 }
@@ -71,7 +72,7 @@
 }
 
 .reviews-nav-button svg {
-  fill: var(--general-color);
+  fill: transparent;
   stroke: var(--general-color);
 }
 
