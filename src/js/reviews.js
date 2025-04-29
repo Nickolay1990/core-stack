@@ -80,6 +80,11 @@ function initializeSwiper(prevButton, nextButton, prevIcon, nextIcon) {
       },
     },
   });
+  // Додаємо обробник події на зміну розміру вікна браузера
+  window.addEventListener('resize', () => {
+    // Викликаємо функцію, яка вирівнює висоту слайдів після зміни розміру вікна
+    setEqualHeightSlides();
+  });
 }
 
 // Функція для налаштування обробників навігації
