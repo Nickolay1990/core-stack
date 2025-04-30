@@ -6,6 +6,9 @@ const form = document.getElementById('contact-form');
 
 const emailInput = document.getElementById('form-email');
 const validIcon = document.getElementById('email-valid-icon');
+const invalidSpan = document.querySelector('.invalid-input');
+const textArea = document.querySelector('.form-comment');
+const invalidArea = document.querySelector('.invalid-text-area');
 
 emailInput.addEventListener('input', () => {
   const pattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
@@ -13,9 +16,19 @@ emailInput.addEventListener('input', () => {
 
   if (pattern.test(email)) {
     validIcon.classList.add('visible');
+    invalidSpan.style.display = 'none';
   } else {
     validIcon.classList.remove('visible');
+    invalidSpan.style.display = 'block';
   }
+});
+
+textArea.addEventListener('input', () => {
+  if (textArea.value.trim()) {
+    invalidArea.style.display = 'none';
+    return;
+  }
+  invalidArea.style.display = 'block';
 });
 
 form.addEventListener('submit', async event => {
