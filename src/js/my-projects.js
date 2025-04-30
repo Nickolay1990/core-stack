@@ -1,4 +1,3 @@
-
 import business from '../video/business.mp4';
 import harvest from '../video/fresh-harvest.mp4';
 import getBody from '../video/get-body.mp4';
@@ -39,7 +38,9 @@ const videoSource = [
   learning,
 ];
 
-const listItems = Array.from(document.querySelectorAll('.projects-list .list-item'));
+const listItems = Array.from(
+  document.querySelectorAll('.projects-list .list-item')
+);
 
 let visibleCount = 3;
 const itemsPerClick = 3;
@@ -115,7 +116,7 @@ function renderMediaContent() {
   });
 
   if (isDesktop) {
-    projectsList.addEventListener('click', (event) => {
+    projectsList.addEventListener('click', event => {
       if (event.target.classList.contains('iframe-button')) {
         const iframe = event.target.previousElementSibling;
         toggleButtonIframe(iframe, event.target);
@@ -138,7 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mediaQuery = window.matchMedia('(min-width: 1280px)');
   mediaQuery.addEventListener('change', () => {
     listItems.forEach(item => {
-      const oldMedia = item.querySelector('.iframe-wrapper') || item.querySelector('video');
+      const oldMedia =
+        item.querySelector('.iframe-wrapper') || item.querySelector('video');
       if (oldMedia) oldMedia.remove();
     });
     renderMediaContent();
