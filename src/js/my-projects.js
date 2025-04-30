@@ -114,19 +114,12 @@ function renderMediaContent() {
 
     cardText.insertAdjacentHTML('beforebegin', mediaHTML);
   });
-
-  if (isDesktop) {
-    projectsList.addEventListener('click', event => {
-      if (event.target.classList.contains('iframe-button')) {
-        const iframe = event.target.previousElementSibling;
-        toggleButtonIframe(iframe, event.target);
-      }
-    });
-  }
 }
 
 function toggleButtonIframe(iframe, button) {
   const active = iframe.style.pointerEvents === 'auto';
+  console.log('1');
+
   iframe.style.pointerEvents = active ? 'none' : 'auto';
   button.textContent = active ? 'Show preview' : 'Hide preview';
 }
@@ -135,6 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
   showItems();
   loadMoreBtn.addEventListener('click', handleLoadMoreClick);
   renderMediaContent();
+  projectsList.addEventListener('click', event => {
+    if (event.target.classList.contains('iframe-button')) {
+      const iframe = event.target.previousElementSibling;
+      toggleButtonIframe(iframe, event.target);
+    }
+  });
 
   const mediaQuery = window.matchMedia('(min-width: 1280px)');
   mediaQuery.addEventListener('change', () => {
