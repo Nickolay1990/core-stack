@@ -118,7 +118,6 @@ function renderMediaContent() {
 
 function toggleButtonIframe(iframe, button) {
   const active = iframe.style.pointerEvents === 'auto';
-  console.log('1');
 
   iframe.style.pointerEvents = active ? 'none' : 'auto';
   button.textContent = active ? 'Show preview' : 'Hide preview';

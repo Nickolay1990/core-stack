@@ -10,8 +10,8 @@
 
 .iframe-button {
   position: absolute;
-  top: 85px;
-  right: 12px;
+  top: 40px;
+  right: 40px;
   display: flex;
   justify-content: center;
   text-transform: uppercase;
