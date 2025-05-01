@@ -102,7 +102,7 @@ function renderMediaContent() {
     if (isDesktop) {
       mediaHTML = `
         <div class="iframe-wrapper">
-          <iframe src="${iframeLinks[index]}" class="iframe-style" loading="lazy"></iframe>
+          <iframe src="${iframeLinks[index]}" class="iframe-style"></iframe>
           <button type="button" class="iframe-button">Show preview</button>
         </div>
       `;
