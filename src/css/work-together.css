@@ -320,6 +320,7 @@
   top: 50px;
   left: 10px;
   display: none;
+  font-size: 12px;
 }
 
 .invalid-text-area {
@@ -328,4 +329,15 @@
   top: 210px;
   left: 10px;
   display: none;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .invalid-input {
+    font-size: 16px;
+  }
+
+  .invalid-text-area {
+    font-size: 16px;
+  }
 }

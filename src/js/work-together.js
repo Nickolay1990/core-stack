@@ -97,6 +97,14 @@ function showSuccessModal(title, message) {
       blockScroll(false);
     }
   });
+  document.addEventListener('keydown', function escHandler(event) {
+    console.log('2');
+
+    if (event.key === 'Escape') {
+      modalBackdrop.remove();
+      document.removeEventListener('keydown', escHandler);
+    }
+  });
 }
 
 function blockScroll(block) {

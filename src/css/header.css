@@ -150,7 +150,7 @@
 }
 .mobile-order-link:hover,
 .mobile-order-link:focus {
-  background-color: #009156;
+  background-color: var(--light-green-color);
 }
 
 .no-scroll {
